@@ -5,7 +5,9 @@
 
 package com.nguyenhoanglam.imagepicker.ui.imagepicker
 
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -77,7 +79,8 @@ class FolderFragment : BaseFragment() {
 
         binding.apply {
             root.setBackgroundColor(Color.parseColor(config.customColor!!.background))
-            progressIndicator.setIndicatorColor(Color.parseColor(config.customColor!!.loadingIndicator))
+            progressIndicator.indeterminateTintList =
+                ColorStateList.valueOf(Color.parseColor(config.customColor!!.loadingIndicator))
             recyclerView.apply {
                 setHasFixedSize(true)
                 layoutManager = gridLayoutManager

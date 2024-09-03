@@ -5,6 +5,7 @@
 
 package com.nguyenhoanglam.imagepicker.ui.imagepicker
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -113,7 +114,7 @@ class ImageFragment : BaseFragment(), OnImageLongPressListener {
 
         binding.apply {
             root.setBackgroundColor(Color.parseColor(config.customColor!!.background))
-            progressIndicator.setIndicatorColor(Color.parseColor(config.customColor!!.loadingIndicator))
+            progressIndicator.indeterminateTintList= ColorStateList.valueOf(Color.parseColor(config.customColor!!.loadingIndicator))
             recyclerView.apply {
                 setHasFixedSize(true)
                 layoutManager = gridLayoutManager

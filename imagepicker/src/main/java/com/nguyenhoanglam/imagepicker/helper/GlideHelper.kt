@@ -16,7 +16,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
-import com.google.android.material.imageview.ShapeableImageView
+
 import com.nguyenhoanglam.imagepicker.R
 
 class GlideHelper {
@@ -49,7 +49,7 @@ class GlideHelper {
             builder.into(imageView)
         }
 
-        fun loadPreviewImage(imageView: ShapeableImageView, uri: Uri) {
+        fun loadPreviewImage(imageView: ImageView, uri: Uri) {
             imageView.post {
                 Glide.with(imageView.context)
                     .load(uri)
