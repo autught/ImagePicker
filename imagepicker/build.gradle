@@ -61,7 +61,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.github.nguyenhoanglam'
                 artifactId = 'final'
-                version = '1.6.2-fixed'
+                version = '1.0.0-custom'
             }
         }
     }
